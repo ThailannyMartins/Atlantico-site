@@ -8,6 +8,7 @@ E precisamos de um gerenciador de noticias para alimentar o site.
 😎Nicho : esportes e futuramente produtos.
 
 👨‍💻👩‍💻Tecnologias : 
+html, css, jacascript
 
 👨‍💻👩‍💻💡 Organização :
 
