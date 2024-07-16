@@ -17,7 +17,7 @@ site informativo contendo noticias,eventos e jogos de futebol, E precisamos de u
 
 ## Time 🫱🏻‍🫲🏽
 - **UI/UX:** 🎨
-  - Alice
+    - Allice
 - **Frontend:** 💻
     - Ramon
     - Thailanny
