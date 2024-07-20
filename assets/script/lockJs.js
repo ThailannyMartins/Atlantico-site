@@ -38,7 +38,7 @@ files[1].addEventListener("change", (ev) => {
     }
     read.onload = function (e) {
         localStorage.setItem('img-2',e.target.result);
-        listImg[0].src = e.target.result;
+        listImg[1].src = e.target.result;
         document.getElementById("text1").textContent = "";
     }
     read.readAsDataURL(path)
