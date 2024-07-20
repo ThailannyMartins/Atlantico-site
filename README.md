@@ -15,7 +15,7 @@ site informativo contendo noticias,eventos e jogos de futebol, E precisamos de u
 - **Criar Noticias (RF003)**
 -  **Modal (RF004)**
 
-## Time 🫱🏻‍🫲🏽
+## Team 🫱🏻‍🫲🏽
 - **UI/UX:** 🎨
     - Allice
 - **Frontend:** 💻
