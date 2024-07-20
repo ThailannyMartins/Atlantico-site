@@ -10,13 +10,6 @@ files[0].addEventListener("change", (ev) => {
     const form = new FormData();
     form.append("file",path);
 
-    const url = "http://localhost:8080/upload"
-    const test = fetch(url,{
-        headers: {
-        },
-        method : "POST",
-        body : form
-    })
 
 
 
@@ -33,7 +26,6 @@ files[0].addEventListener("change", (ev) => {
         document.getElementById("text").textContent = ""
 
     }
-    
     
     read.readAsDataURL(path)
 })
