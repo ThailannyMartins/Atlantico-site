@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    display: flex;
+    gap: 2rem;
+}
+aside{
+    height: 100vh;
+    width: 14.792vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 0 4px black;
+    padding: 1rem;
+}
+aside > #content-logo{
+    padding-block-end: 1rem;
+
+}
+aside > nav{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+}
+aside > nav > .btn:focus + .content-opt{
+    height: 15%;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+}
+aside > nav > .btn:hover{
+    color: #8A2BE2;
+    background-color: #5b1dd725;
+}
+aside > nav > .btn{
+    transition: 1s;
+    font-weight: 500;
+    padding: .5rem;
+    border-radius: .5rem;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    border: none;
+    width:calc(63% + 50px);
+}
+
+aside > nav > .content-opt{
+    transition: 1s;
+    display: none;
+    padding-right: .5rem;
+    height: 0px;
+
+}
+aside > nav > .content-opt::-webkit-scrollbar{
+    width: 2px;
+}
+aside > nav > .content-opt::-webkit-scrollbar-thumb{
+    height: .15rem;
+    border-radius: 1rem;
+    background: linear-gradient(to top,#38135b,#8A2BE2);
+}
+aside > nav > .content-opt::-webkit-scrollbar{
+    width: 4px;
+}
+aside > nav > .content-opt > button{
+    width: 100%;
+    transition: 1s;
+    font-weight: 500;
+    padding: .5rem;
+    border-radius: .5rem;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    justify-content:flex-start ;
+    border: none;
+}
+aside > nav > .content-opt > button:hover{
+    color: #8A2BE2;
+    background-color: #5b1dd72c;
+}
+
+main {
+    width: 80vw;
+    height: 100vh;
+}
+main > section{
+    width: 100%;
+    padding: 2rem 0;
+}
+main > section > #alert{
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 39.306vh;
+    border-radius: .5rem;
+    border: .5px solid rgba(0, 0, 0, 0.313);
+    box-shadow: 0 calc(1/4 * 1rem) calc(1/4 * 1rem) rgba(0, 0, 0, 0.237);
+}
+main > section > #alert > .conteiner-img , main > section > #alert > .conteiner-text{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+main > section > #alert > .conteiner-img > .card > img{
+    width: 100%;
+    height: 100%;
+}
+main > section > #alert > .conteiner-img > .card {
+    width: 25%;
+    height:90%;
+}
+main > section > .conteiner-div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    width: 100%;
+    height: 30vh;
+}
+main > section > .conteiner-div > .conteiners {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    border-radius: .5rem;
+    background: url(../../public/images/2000s-vibes-with-metallic-reflective-effect.jpg) 50% 50%;
+    background-size: cover;
+    color: #fff;
+}
+main > section > .conteiner-div > .conteiner-partida {
+    height: calc( 100% + 48px);
+    width: 20%;
+}
+
+main > section > .conteiner-div > .conteiner-partida > .bodyConteiner > .content-escudos{
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem 0;
+    gap: 1rem;
+    height:100%;
+}
+main > section > .conteiner-div > .conteiner-partida > .bodyConteiner > .content-escudos > img{
+    width: 100%;
+    height: 100%;
+}
+main > section > .conteiner-div > .conteiner-partida > .bodyConteiner{
+    padding-block-start: 1rem;
+}
+main > section > .conteiner-div > .conteiners > div{
+    width: 100%;
+    height: 100%;
+    gap: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #00000060;
+}
+main > section > .conteiner-div > .conteiners > div:hover{
+    background: #00000080;
+    transition: 1s;
+}
+
+.headConteiner {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.escudo-principal{
+    width: 100%;
+    height: 100%;
+}
+.headConteiner > span{
+    padding: .25rem;
+    border-left: 4px solid #8A2BE2;
+}
+.headConteiner > span[id="modality"]{
+    display: flex;
+    justify-content: center;
+    border-radius: .05rem;
+    color: #fff;
+    width: fit-content;
+    padding: .25rem .5rem;
+    background: #8A2BE2;
+}
