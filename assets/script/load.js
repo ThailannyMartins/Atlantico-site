@@ -1,20 +1,63 @@
 const emblems = document.getElementsByClassName("escudo-principal")
+const cardsImages = document.getElementsByClassName('expired-images')
 const modality = document.getElementById("modality")
 
-function expose() {
+const url = 'http://localhost:8082/neptune'
+function exposePartida() {
     const search = async () => {
-        const response = await fetch('http://localhost:8080/neptune').then(json => json.json()).then(json => {
-            renderExpose(json)
+        const response = await fetch(url).then(json => json.json()).then(json => {
+            renderPartida(json)
         }
         )
     }
     search()
-
 }
-function renderExpose(e) {
-    console.log(e[0].teamLogoA)
+function exposeNoticia() {
+    const search = async () => {
+        const response = await fetch(url + "/noticias").then(json => json.json()).then(json => {
+            sessionStorage.setItem('response',JSON.stringify(json))
+            renderNoticia()
+        }
+        )
+    }
+    search()
+}
+
+function renderPartida(e) {
     emblems[0].src = e[0].teamLogoA;
     emblems[1].src = e[0].teamLogoB;
     modality.textContent = e[0].competicao ?? 'amistoso'
 }
-expose()
+ function renderNoticia() {
+    const responses = JSON.parse(sessionStorage.getItem('response'))
+    const lista = strDateTime(responses);
+
+}
+
+exposeNoticia()
+exposePartida()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

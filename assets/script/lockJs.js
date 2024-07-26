@@ -69,7 +69,7 @@ btn.addEventListener('click',async(e) => {
             body: JSON.stringify(obj)
     }
     
-    const request = await fetch('http://localhost:8080/neptune',header).then(response => response.json());
+    const request = await fetch('http://localhost:8082/neptune',header).then(response => response.json());
 })
 function getFileExtension(filename) {
     const parts = filename.split('.');
