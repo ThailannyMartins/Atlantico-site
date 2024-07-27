@@ -12,15 +12,13 @@
         <img src="./public/icons/Frame 4997.svg" alt="" />
       </div>
       <nav>
-        <button class="btn"><img src="./public/icons/home/create.svg" alt=""> modificar</button>
-        <div class="content-opt">
-          
+        <button id="modificar" class="btn"><img src="./public/icons/home/create.svg" alt=""> modificar</button>
+        <div class="content-opt" id="content-opt">
           <button class="pass-page">proxima partida</button>
-          <button class="pass-page">banner</button>
           <button class="pass-page">noticia</button>
         </div>
-        <button class="btn"><img src="./public/icons/home/list.svg">listar</button>
-        <button class="btn"><img src="./public/icons/home/settings.svg">configurações</button>
+        <button class="btn pass-page"><img src="./public/icons/home/list.svg">listar</button>
+        <button class="btn pass-page"><img src="./public/icons/home/settings.svg">configurações</button>
       </nav>
     </aside>
     <main>
@@ -31,18 +29,18 @@
           </div>
           <div class="conteiner-img">
             <div class="card">
-              <img class="expired-images" src="./public/images/2000s-vibes-with-metallic-reflective-effect.jpg" alt="">
+              <img class="expired-images load" src=""  alt="">
             </div>
-            <div class="card">
-              <img class="expired-images" src="./public/images/2000s-vibes-with-metallic-reflective-effect.jpg" alt="">
+            <div class="card load">
+              <img class="expired-images"  alt="">
             </div>
-            <div class="card">
-              <img class="expired-images" src="./public/images/2000s-vibes-with-metallic-reflective-effect.jpg" alt="">
+            <div class="card load">
+              <img class="expired-images" alt="">
             </div>
           </div>
         </div>
       </section>
-      <section>
+      <section id="bottom-content">
         <div class="conteiner-div">
           <div class="conteiner-partida">
             <div class="headConteiner">
@@ -51,8 +49,8 @@
             </div>
             <div class="bodyConteiner">
               <div class="content-escudos">
-                <div class="escudo"><img src="./public/icons/home/sports-club-svgrepo-com 1.svg" alt="" class="escudo-principal"></div>
-                <div class="escudo"><img src="./public/icons/home/sports-club-svgrepo-com 1.svg" alt="" class="escudo-principal"></div>
+                <div class="escudo"><img  alt="" src="" class="escudo-principal load"></div>
+                <div class="escudo"><img  alt="" src="" class="escudo-principal load"></div>
               </div>
             </div>
           </div>
@@ -66,5 +64,10 @@
       </section>
     </main>
   </body>
+  <!-- carrega as imaagens -->
   <script src="./assets/script/load.js"></script>
+  <!-- carrega as configurações -->
+  <script src="./assets/script/config/config.js"></script>
+  <!-- carregas o fluxo de paginas -->
+   <script src="./assets/script/flow-pages/home-pages.js"></script>
 </html>

@@ -4,6 +4,7 @@ const form = document.getElementsByClassName("form");
 const btn = document.querySelector('button');
 const returnbtn = document.getElementById('return-home');
 
+
 files[0].addEventListener("change", (ev) => {
     const read = new FileReader();
     const path = ev.target.files[0];
@@ -18,7 +19,7 @@ files[0].addEventListener("change", (ev) => {
         throw new Error('tipo não suportado')
     }
     read.onload = function (e) {
-        localStorage.setItem('img-1',e.target.result);
+        sessionStorage.setItem('img-1',e.target.result);
         listImg[0].src = e.target.result;
         document.getElementById("text").textContent = "";
 
@@ -37,7 +38,7 @@ files[1].addEventListener("change", (ev) => {
         throw new Error('tipo não suportado');
     }
     read.onload = function (e) {
-        localStorage.setItem('img-2',e.target.result);
+        sessionStorage.setItem('img-2',e.target.result);
         listImg[1].src = e.target.result;
         document.getElementById("text1").textContent = "";
     }
@@ -58,7 +59,7 @@ btn.addEventListener('click',async(e) => {
         
     }
 
-    const obj = new Matcher(values[0],values[1],values[2],localStorage.getItem('img-1'),localStorage.getItem('img-2'),values[3]);
+    const obj = new Matcher(values[0],values[1],values[2],sessionStorage.getItem('img-1'),sessionStorage.getItem('img-2'),values[3]);
 
     const header = {
             headers: {

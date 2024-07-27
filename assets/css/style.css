@@ -30,17 +30,25 @@ aside > nav{
     flex-direction: column;
     align-items: center;
 }
-aside > nav > .btn:focus + .content-opt{
-    height: 15%;
-    overflow: auto;
+    
+aside > nav > .open  {
+    overflow: hidden;
     display: flex;
     align-items: center;
     flex-direction: column;
+    transition: 1s;
+    padding-right: .5rem;
     gap: .5rem;
+    height:30%;
+    padding-block-end: 50%;
 }
 aside > nav > .btn:hover{
     color: #8A2BE2;
     background-color: #5b1dd725;
+}
+aside > nav > .content-opt{
+    display: none;
+    height: 0%;
 }
 aside > nav > .btn{
     transition: 1s;
@@ -54,25 +62,7 @@ aside > nav > .btn{
     width:calc(63% + 50px);
 }
 
-aside > nav > .content-opt{
-    transition: 1s;
-    display: none;
-    padding-right: .5rem;
-    height: 0px;
-
-}
-aside > nav > .content-opt::-webkit-scrollbar{
-    width: 2px;
-}
-aside > nav > .content-opt::-webkit-scrollbar-thumb{
-    height: .15rem;
-    border-radius: 1rem;
-    background: linear-gradient(to top,#38135b,#8A2BE2);
-}
-aside > nav > .content-opt::-webkit-scrollbar{
-    width: 4px;
-}
-aside > nav > .content-opt > button{
+aside > nav > .open > button{
     width: 100%;
     transition: 1s;
     font-weight: 500;
@@ -84,7 +74,7 @@ aside > nav > .content-opt > button{
     justify-content:flex-start ;
     border: none;
 }
-aside > nav > .content-opt > button:hover{
+aside > nav > .open > button:hover{
     color: #8A2BE2;
     background-color: #5b1dd72c;
 }
@@ -92,10 +82,15 @@ aside > nav > .content-opt > button:hover{
 main {
     width: 80vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem 0;
+
 }
 main > section{
+    height: fit-content;
     width: 100%;
-    padding: 2rem 0;
 }
 main > section > #alert{
     display: flex;
@@ -114,6 +109,10 @@ main > section > #alert > .conteiner-img , main > section > #alert > .conteiner-
     justify-content: center;
     gap: 1rem;
 }
+#bottom-content{
+    height: fit-content;
+    width: 100%;
+}
 main > section > #alert > .conteiner-img > .card > img{
     width: 100%;
     height: 100%;
@@ -127,7 +126,7 @@ main > section > .conteiner-div {
     justify-content: space-between;
     gap: 1.5rem;
     width: 100%;
-    height: 30vh;
+    height: 100%;
 }
 main > section > .conteiner-div > .conteiners {
     overflow: hidden;
@@ -142,7 +141,7 @@ main > section > .conteiner-div > .conteiners {
     color: #fff;
 }
 main > section > .conteiner-div > .conteiner-partida {
-    height: calc( 100% + 48px);
+    height: fit-content;
     width: 20%;
 }
 
@@ -152,13 +151,41 @@ main > section > .conteiner-div > .conteiner-partida > .bodyConteiner > .content
     padding: 1rem 0;
     gap: 1rem;
     height:100%;
-}
-main > section > .conteiner-div > .conteiner-partida > .bodyConteiner > .content-escudos > img{
     width: 100%;
-    height: 100%;
+}
+main > section > .conteiner-div > .conteiner-partida > .bodyConteiner > .content-escudos > .escudo{
+    width: 9rem;
+    height: 9rem;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+
+}
+main > section > .conteiner-div > .conteiner-partida > .bodyConteiner > .content-escudos > .escudo > img{
+    width: 9rem;
+    height: 9rem;
+    border-radius: 1rem;
+
+}
+.load{
+    background: linear-gradient(to right,#ffffff53,#dfdfdf);
+    border: none;
+    outline: none;
+    background-position-x:0 ;
+    animation: loadBackground 1s cubic-bezier(0.79,-0.42,0.56,0.99) infinite;
 }
 main > section > .conteiner-div > .conteiner-partida > .bodyConteiner{
     padding-block-start: 1rem;
+}
+
+main > section > .conteiner-div > .conteiners {
+    width: 50%;
+    height: 100%;
+    /* gap: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+    background: #00000060;
 }
 main > section > .conteiner-div > .conteiners > div{
     width: 100%;
@@ -167,7 +194,6 @@ main > section > .conteiner-div > .conteiners > div{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #00000060;
 }
 main > section > .conteiner-div > .conteiners > div:hover{
     background: #00000080;
@@ -195,4 +221,13 @@ main > section > .conteiner-div > .conteiners > div:hover{
     width: fit-content;
     padding: .25rem .5rem;
     background: #8A2BE2;
+}
+
+
+@keyframes loadBackground {
+    to{
+        background-position-x:9rem;
+    }from{
+        background-position-x: 0rem;
+    }
 }
