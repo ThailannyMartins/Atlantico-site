@@ -4,9 +4,9 @@ let buttonsPages = document.getElementsByClassName("pass-page")
 
 let open = true;
 let pages = {
-    "proxima partida": "index-up-game.html",
+    "proxima partida": "atualizar-partida.html",
     "noticia": "",
-    "listar": "listar.html",
+    "listar": "noticias.html",
 }
 
 mody.addEventListener('click',(e) => {

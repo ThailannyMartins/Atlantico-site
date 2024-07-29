@@ -1,42 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/styles/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Postagem de Notícias</title>
+    <link rel="stylesheet" href="../css/noticias.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
-    <div class="header">
-        <img class="exit" src="/assets/exit.svg" alt="Sair">
-        <p class="title">Title</p>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="../../public/icons/Frame 4997.svg" alt="Logo">
+            </div>
+            <form>
+                <div class="form-group">
+                    <input type="text" id="title" name="title" placeholder="Título" oninput="updateTitle()">
+                </div>
+                <div class="form-group">
+                    <div class="date-wrapper">
+                        <input type="text" id="date" name="date" placeholder="Escolha a data">
+                        <span class="date-icon">📅</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="file" id="image" name="image" accept="image/*" onchange="previewImage()">
+                </div>
+                <div class="form-group">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+        <div class="main-content">
+            <div class="news-title">
+                <h1 id="news-title-preview">Título da Notícia</h1>
+            </div>
+            <div class="news-image">
+                <img id="news-image-preview" src="" alt="Imagem da Notícia" style="display: none;">
+            </div>
+        </div>
     </div>
-    <main class="container">
-        <div class="box">
-
-        </div>
-        <div class="main-text">
-            <p class="date">Data de Criação</p>
-            <p class="date-format">dd/MM/yy</p>
-        </div>
-        <p class="preview">Preview</p>
-        <p class="preview-text">uewfkdgyyklufgeçfhwofhdkhnosdçhfkzcbzxbkchodfsgdcbk<br>asp~cashcdaolxcsl;cakscjdbhdoiaçfhasopdfeihweo</p>
-    </main>
-    <img id="open-modal" class="lixeira" src="/assets/lixeira.svg" alt="Lixeira">
-    <script src="/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="../script/listar.js"></script>
+ 
 </body>
-<dialog>
-    <div class="title-and-x">
-        <p class="deleting">Deletando Notícia</p>
-        <img class="close-modal" src="/assets/x.svg" alt="Fechar">
-    </div>
-    <p>Você está prestes a apagar essa noticia do<br>banco de dados. Se deseja continuar com o processo, digite essa chave.</p>
-    <div class="keycode">
-        <div class="keycode-is">
-            <p class="keycode">O codigo chave é:</p><strong>620bf7d4-51a8-40e4-8bee-9ea3e95b759f</strong>
-        </div>
-        <input class="input-keycode" type="text" placeholder="Código">
-    </div>
-</dialog>
 </html>
