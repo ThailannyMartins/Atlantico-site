@@ -1,0 +1,72 @@
+[
+    {
+        "img": "https://local/email2.svg",
+        "title": "Title 3",
+        "idPublic": "550e8400-e29b-41d4-a716-446655440002",
+        "date": "2024/07/26",
+        "preview": "dolor sit amet"
+    },
+    {
+        "img": "https://local/email3.svg",
+        "title": "Title 4",
+        "idPublic": "550e8400-e29b-41d4-a716-446655440003",
+        "date": "2024/07/27",
+        "preview": "consectetur adipiscing elit"
+    },
+    {
+        "img": "https://local/email4.svg",
+        "title": "Title 5",
+        "idPublic": "550e8400-e29b-41d4-a716-446655440004",
+        "date": "2024/07/28",
+        "preview": "sed do eiusmod tempor"
+    },
+    {
+        "img": "https://local/email5.svg",
+        "title": "Title 6",
+        "idPublic": "550e8400-e29b-41d4-a716-446655440005",
+        "date": "2024/07/29",
+        "preview": "incididunt ut labore"
+    },
+    {
+        "img": "https://local/email6.svg",
+        "title": "Title 7",
+        "idPublic": "550e8400-e29b-41d4-a716-446655440006",
+        "date": "2024/07/30",
+        "preview": "et dolore magna aliqua"
+    },
+    {
+        "img": "https://local/email7.svg",
+        "title": "Title 8",
+        "idPublic": "550e8400-e29b-41d4-a716-446655440007",
+        "date": "2024/07/31",
+        "preview": "ut enim ad minim veniam"
+    },
+    {
+        "img": "https://local/email8.svg",
+        "title": "Title 9",
+        "idPublic": "550e8400-e29b-41d4-a716-446655440008",
+        "date": "2024/08/01",
+        "preview": "quis nostrud exercitation"
+    },
+    {
+        "img": "https://local/email9.svg",
+        "title": "Title 10",
+        "idPublic": "550e8400-e29b-41d4-a716-446655440009",
+        "date": "2024/08/02",
+        "preview": "ullamco laboris nisi"
+    },
+    {
+        "img": "https://local/email10.svg",
+        "title": "Title 11",
+        "idPublic": "550e8400-e29b-41d4-a716-446655440010",
+        "date": "2024/08/03",
+        "preview": "ut aliquip ex ea commodo"
+    },
+    {
+        "img": "https://local/email11.svg",
+        "title": "Title 12",
+        "idPublic": "550e8400-e29b-41d4-a716-446655440011",
+        "date": "2024/08/04",
+        "preview": "consequat"
+    }
+]

@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+}
+input[type="file"]{
+    display: none;
+}
+aside{
+    padding: 2rem 0;
+    width: 15vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+main{
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+main > div {
+    width: 70%;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    
+
+}
+main > div > input{
+    width: 50%;
+    height: 2rem;
+    border-radius: .25rem;
+    padding: 1rem;
+    border: 1px solid #c3c3c3;
+    background: #e1e1e1;
+    outline: none;
+}
+main > div > textarea{
+    width: 70%;
+    border-radius: .25rem;
+    padding: .5rem;
+    background: #e1e1e1;
+    border: 1px solid #c3c3c3;
+    outline: none;
+    resize:none;
+}
+
+main > article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 50%;
+    background: #c5c5c5;
+}
+
+button{
+    padding:1rem;
+    border-radius: .5rem;
+    border: 1px solid;
+    width: fit-content;
+    background: #8438ff;
+    color: #fff;
+}
+button:hover{
+    background: #741eff;
+    transition: 1s;
+}

@@ -16,7 +16,7 @@
     <p>Você está prestes a apagar essa noticia do<br>banco de dados. Se deseja continuar com o processo, digite essa chave.</p>
     <div class="keycode">
         <div class="keycode-is">
-            <p class="keycode">O codigo chave é:</p><strong>620bf7d4-51a8-40e4-8bee-9ea3e95b759f</strong>
+            <p class="keycode">O codigo chave é:</p><strong id="code"></strong>
         </div>
         <input class="input-keycode" type="text" placeholder="escreva o codigo aqui">
     </div>
@@ -25,8 +25,8 @@
 <body>
     <div id="overlay"></div>
     <div class="header">
-        <img class="exit" src="../../public/icons/home/exit_to_app.svg" alt="Sair">
-        <p class="title">Title</p>
+        <img class="exit" src="../../public/icons/home/exit_to_app.svg" alt="Sair" id="sair">
+        <p class="title" id="title">Title</p>
     </div>
     <main class="container">
         <div class="box">
@@ -34,10 +34,10 @@
         </div>
         <div class="main-text">
             <p class="date">Data de Criação</p>
-            <p class="date-format">dd/MM/yy</p>
+            <p class="date-format" id="date">dd/MM/yy</p>
         </div>
         <p class="preview">Preview</p>
-        <p class="preview-text">uewfkdgyyklufgeçfhwofhdkhnosdçhfkzcbzxbkchodfsgdcbk<br>asp~cashcdaolxcsl;cakscjdbhdoiaçfhasopdfeihweo</p>
+        <p class="preview-text" id="desc">uewfkdgyyklufgeçfhwofhdkhnosdçhfkzcbzxbkchodfsgdcbk<br>asp~cashcdaolxcsl;cakscjdbhdoiaçfhasopdfeihweo</p>
     </main>
     <img id="open-modal" class="lixeira" src="../../public/icons/noticia/lixeira.svg" alt="Lixeira">
 </body>

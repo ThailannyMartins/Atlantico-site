@@ -3,6 +3,7 @@ const listImg = document.getElementsByClassName("renderizerImg");
 const form = document.getElementsByClassName("form");
 const btn = document.querySelector('button');
 const returnbtn = document.getElementById('return-home');
+const popOver = document.getElementById('popOver')
 
 
 files[0].addEventListener("change", (ev) => {
@@ -59,7 +60,8 @@ btn.addEventListener('click',async(e) => {
         
     }
 
-    const obj = new Matcher(values[0],values[1],values[2],sessionStorage.getItem('img-1'),sessionStorage.getItem('img-2'),values[3]);
+    console.log(values)
+    const obj = new Matcher(values[0] || null ,values[1] || null ,values[2] || null,sessionStorage.getItem('img-1'),sessionStorage.getItem('img-2'),values[3] || null,values[4]);
 
     const header = {
             headers: {
@@ -70,8 +72,14 @@ btn.addEventListener('click',async(e) => {
             body: JSON.stringify(obj)
     }
     
-    const request = await fetch('http://localhost:8082/neptune',header).then(response => response.json());
-})
+    const request = await fetch('http://localhost:8082/neptune',header).then(async(response) => {
+        const body = await response.json()
+        activyPoP(response.status,body.mensagem)
+    })
+    });
+    const errorText = document.getElementById("error")
+    const icons = document.getElementById("icons")
+
 function getFileExtension(filename) {
     const parts = filename.split('.');
     return parts[parts.length - 1];
@@ -91,16 +99,41 @@ class Matcher{
     localizacao;
     competicao;
     horarioMatcher;
-    constructor(tim1,tim2,loc,log1,log2,horario){
+    constructor(tim1,tim2,loc,log1,log2,horario,compt){
         this.localizacao = loc;
         this.teamLogoA = log1;
         this.teamLogoB = log2;
         this.nameTeamA = tim1;
         this.nameTeamB = tim2;
         this.horarioMatcher = horario;
+        this.competicao = compt;
 
 
     }
 }
+const activyPoP = (status,mensagem) => {
+    const text = document.getElementById('error')
+    const icons = document.getElementById('icons')
+    if(status == 417){
+        popOver.style.display = "flex"
+        popOver.classList.add("popOverFailed");
+        popOver.classList.remove("popOverSucess");
+        text.textContent = mensagem      
+        icons.setAttribute("src","../../../public/icons/listar/arrow-bottom-svgrepo-com 1.svg")
+        setTimeout(() => {
+            popOver.style.display = "none"
+        },3000)
+    }
+    if(status == 201){
+        popOver.style.display = "flex"
+        popOver.classList.add("popOverSucess");
+        popOver.classList.remove("popOverFailed"); 
+        text.textContent = "partida atualizada"
+        icons.setAttribute("src","../../../public/icons/listar/success-check-win-done-mark-good-svgrepo-com 1.svg")
 
+        setTimeout(() => {
+            popOver.style.display = "none"
+        },3000)    
+    }
+}
 
