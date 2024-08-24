@@ -8,20 +8,22 @@
 </head>
 <body>
     <aside>
-        <img src="../../public/icons/home/exit_to_app.svg" alt="">
+        <img src="../../public/icons/home/exit_to_app.svg" alt="" id="sair">
     </aside>
     <main>
         <article>
             <label for="file">
-                <img src="../../public/icons/broken_image.svg" alt="">
+                <img src="../../public/icons/broken_image.svg" id="image" alt="">
             </label>
         </article>
         <div>
+            <button id="enviar-img">enviar imagem</button>
             <input type="file" id="file">
-            <input type="text" placeholder="escreva o titulo da noticia">
-            <textarea name="" id="" rows="5" placeholder="escreva o corpo da noticia"></textarea>
-            <button>enviar</button>
+            <input type="text" placeholder="escreva o titulo da noticia" id="title">
+            <textarea rows="5" placeholder="escreva o corpo da noticia" id="desc"></textarea>
+            <button id="enviar">enviar</button>
         </div>
     </main>
+    <script src="../script/criar-noticia.js"></script>
 </body>
 </html>

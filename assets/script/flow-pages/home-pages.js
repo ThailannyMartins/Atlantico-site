@@ -1,14 +1,18 @@
 const mody = document.getElementById("modificar")
 const content = document.getElementById("content-opt")
+const redire = document.getElementById("redirect")
 let buttonsPages = document.getElementsByClassName("pass-page")
 
 let open = true;
 let pages = {
     "proxima partida": "atualizar-partida.html",
-    "noticia": "",
+    "noticia": "criar-noticia.html",
     "listar": "noticias.html",
 }
 
+redire.addEventListener('click',() => {
+    location.href = 'https://www.instagram.com/atlanticosociedadeesportiva/'
+})
 mody.addEventListener('click',(e) => {
     if(open){
         content.classList.add("open")

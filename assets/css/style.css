@@ -222,7 +222,9 @@ main > section > .conteiner-div > .conteiners > div:hover{
     padding: .25rem .5rem;
     background: #8A2BE2;
 }
-
+embed{
+    width: 50%;
+}
 
 @keyframes loadBackground {
     to{

@@ -6,16 +6,18 @@ const btnSair = document.getElementById('exist')
 const dbLocal = localStorage
 const dbSession = sessionStorage
 
-
+const url = 'http://localhost:8082/neptune/noticias'
 onload = () => {
     fn();
     renderizerAll();
 }
-
+location.reload = () => {
+    dbLocal.clear();
+}
 
 
 const fn = async () => {
-    const response = await fetch("/assets/script/db.json").then(response => response.json());
+    const response = await fetch(url).then(response => response.json());
     dbSession.clear()
     dbSession.setItem("responses", JSON.stringify(response))
 }
@@ -47,13 +49,14 @@ function renderizerAll() {
             `       
         <div class="card" 
         data-titulo=${element.title.replaceAll(" ","-")}
-        data-desc=${element.preview.replaceAll(" ","-")}
-        data-date=${element.date}
+        data-desc=${element.desc.replaceAll(" ","-")}
+        data-date=${element.createdAt}
         data-id=${element.idPublic} 
+        data-path=${element.path}
         
         >
             <h1>${element.title}</h1>
-            <img src="${element.img}" class="load" alt="">
+            <img src="${element.path}" class="load" alt="">
         </div>
 
         `
@@ -67,13 +70,15 @@ function renderizerAll() {
                 const idPub = element.dataset.id
                 const preview = element.dataset.desc
                 const date = element.dataset.date
+                const path = element.dataset.path
 
 
                 const cardData = {
                     title,
                     idPub,
                     preview,
-                    date
+                    date,
+                    path
                 }
 
                 dbSession.setItem("card", JSON.stringify(cardData))

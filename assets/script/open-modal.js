@@ -3,6 +3,7 @@ const btnSair = document.getElementById('btn-closer')
 const btnSairDaPagina = document.getElementById('sair')
 const btnLixeira = document.getElementById('open-modal')
 const background = document.getElementById('overlay')
+const box = document.getElementById('box')
 const layerBack = "overlay"
 const dbSession = sessionStorage 
 onload = ()  => {
@@ -15,6 +16,7 @@ onload = ()  => {
     date.textContent = response.date
     desc.textContent = response.preview.replaceAll("-"," ")
     code.textContent = response.idPub
+    box.src = response.path
 
 }
 btnSair.addEventListener('click', () => {
